@@ -1,12 +1,12 @@
 <form method="post" action="/login">
     @csrf
     <div>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="email" />
+       <label for="username">Username</label>
+        <input name="username" id="username" type="text">
     </div>
     <div>
         <label for="password">Password</label>
-        <input name="password" id="password" type="password" />
+        <input name="password" id="password" type="password" required>
     </div>
     <button type="submit">Login</button>
 </form>
