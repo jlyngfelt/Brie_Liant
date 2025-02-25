@@ -11,4 +11,4 @@
     <button type="submit">Login</button>
 </form>
 
-    <a href="<?= route('products.index') ?>">Products</a>
+    <a href="{{ route('products.index') }} ">Products</a>
