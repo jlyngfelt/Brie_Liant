@@ -31,14 +31,24 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Product();
+        // $product = new Product();
 
-        $product->name = $request->name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->image_path = $request->image_path;
+        // $product->name = $request->name;
+        // $product->description = $request->description;
+        // $product->price = $request->price;
+        // $product->image_path = $request->image_path;
 
-        $product->save();
+        // $product->save();
+
+        $request->validate([
+            'name' => 'required|max:100',
+            'description' => 'required',
+            'price' => 'required',
+            'image_path' => 'nullable'
+        ]);
+
+        Product::create($request->input());
+
 
         return redirect()->route('products.index');
     }
