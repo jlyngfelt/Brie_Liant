@@ -7,23 +7,28 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/products', [ProductController::class, 'index'])
-    ->name('products.index');
+Route::controller(ProductController::class)
+    ->prefix('products')
+    ->group(function () {
 
-Route::get('/products/create', [ProductController::class, 'create'])
-    ->name('products.create');
+        Route::get('/', 'index')
+            ->name('products.index');
 
-Route::post('/products/store', [ProductController::class, 'store'])
-    ->name('products.store');
+        Route::get('/create', 'create')
+            ->name('products.create');
 
-Route::get('/products/{product}', [ProductController::class, 'show'])
-    ->name('products.show');
+        Route::post('/store', 'store')
+            ->name('products.store');
 
-Route::get('/products/{product}/edit', [ProductController::class, 'edit'])
-    ->name('products.edit');
+        Route::get('/{product}', 'show')
+            ->name('products.show');
 
-Route::patch('/products/{product}', [ProductController::class, 'update'])
-    ->name('products.update');
+        Route::get('/{product}/edit', 'edit')
+            ->name('products.edit');
 
-Route::delete('products/{product}', [ProductController::class, 'destroy'])
-    ->name('products.destroy');
+        Route::patch('/{product}', 'update')
+            ->name('products.update');
+
+        Route::delete('/{product}', 'destroy')
+            ->name('products.destroy');
+    });
