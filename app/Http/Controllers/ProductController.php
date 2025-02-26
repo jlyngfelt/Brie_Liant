@@ -39,6 +39,8 @@ class ProductController extends Controller
         $product->image_path = $request->image_path;
 
         $product->save();
+
+        return redirect()->route('products.index');
     }
 
     /**
