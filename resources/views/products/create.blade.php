@@ -2,10 +2,10 @@
 
     <h1>New Product</h1>
 
-<x-errors/>
+    <x-errors />
 
     <form method="post" action="{{ route('products.store') }}">
-<x-product.form/>
+        <x-product.form />
 
     </form>
 
