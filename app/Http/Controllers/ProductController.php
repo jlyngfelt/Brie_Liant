@@ -46,7 +46,8 @@ class ProductController extends Controller
         $product = Product::create($request->validated());
 
 
-        return redirect()->route('products.show', $product);
+        return redirect()->route('products.show', $product)
+        ->with('status', 'Product created');
     }
 
     /**
@@ -62,7 +63,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit', compact('product'));
+        return view('products.edit', compact('product'))
+        ->with('status', 'Product edited');
     }
 
     /**
@@ -82,6 +84,7 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')
+        ->with('status', 'Product deleted');
     }
 }
