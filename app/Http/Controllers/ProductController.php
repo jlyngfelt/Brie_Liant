@@ -15,7 +15,7 @@ class ProductController extends Controller
     {
 
         return view('products.index', [
-            'products' => Product::all()
+            'products' => Product::paginate(1)
         ]);
     }
 
@@ -47,7 +47,7 @@ class ProductController extends Controller
 
 
         return redirect()->route('products.show', $product)
-        ->with('status', 'Product created');
+            ->with('status', 'Product created');
     }
 
     /**
@@ -64,7 +64,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         return view('products.edit', compact('product'))
-        ->with('status', 'Product edited');
+            ->with('status', 'Product edited');
     }
 
     /**
@@ -85,6 +85,6 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect()->route('products.index')
-        ->with('status', 'Product deleted');
+            ->with('status', 'Product deleted');
     }
 }
