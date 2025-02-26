@@ -12,7 +12,7 @@
         <textarea name="description" id="description" required></textarea>
 
         <label for="price">Price</label>
-        <input type="number" name="price" id="price" step="0.01" required>
+        <input type="number" name="price" id="price" step="1.0" required>
 
         <label for="image_path">Upload Image</label>
         <input type="file" name="image_path" id="image_path" accept="image/*">
