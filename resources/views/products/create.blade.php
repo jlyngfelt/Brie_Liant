@@ -2,7 +2,7 @@
 
     <h1>New Product</h1>
 
-    <form method="post">
+    <form method="post" action="{{ route('products.store') }}">
         @csrf
 
         <label for="name">Name</label>
