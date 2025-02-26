@@ -43,10 +43,10 @@ class ProductController extends Controller
 
 
 
-        Product::create($request->validated());
+        $product = Product::create($request->validated());
 
 
-        return redirect()->route('products.index');
+        return redirect()->route('products.show', $product);
     }
 
     /**
