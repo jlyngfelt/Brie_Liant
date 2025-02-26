@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\SaveProductRequest;
 
 class ProductController extends Controller
 {
@@ -29,7 +30,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(SaveProductRequest $request)
     {
         // $product = new Product();
 
@@ -40,14 +41,9 @@ class ProductController extends Controller
 
         // $product->save();
 
-        $request->validate([
-            'name' => 'required|max:100',
-            'description' => 'required',
-            'price' => 'required',
-            'image_path' => 'nullable'
-        ]);
 
-        Product::create($request->input());
+
+        Product::create($request->validated());
 
 
         return redirect()->route('products.index');
@@ -72,9 +68,11 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $products)
+    public function update(SaveProductRequest $request, Product $product)
     {
-        //
+        $product->update($request->validated());
+
+        return view('products.show', $product);
     }
 
     /**
