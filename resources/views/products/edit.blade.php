@@ -1,10 +1,13 @@
 <x-layout>
 
-    <h1>Edit Product</h1>
+    <h1>Edit Product: {{ $product->name }}</h1>
 
     <x-errors />
 
-    <form method="post" action="">
+    <form method="POST" action="{{ route('products.update', $product) }}">
+        @csrf
+        @method('PATCH')
+        
         <x-product.form :product="$product" />
 
     </form>
