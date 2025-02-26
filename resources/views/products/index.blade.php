@@ -10,5 +10,7 @@
         <img src="{{ $product->image_path }}" alt="Ostbricka">
     @endforeach
 
+{{ $products->links() }}
+
 </x-layout>
 
