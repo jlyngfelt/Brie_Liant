@@ -72,7 +72,7 @@ class ProductController extends Controller
     {
         $product->update($request->validated());
 
-        return view('products.show', $product);
+        return redirect()->route('products.show', $product);
     }
 
     /**
