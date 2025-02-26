@@ -10,6 +10,6 @@
 <input type="number" name="price" id="price" step="1.0" value="{{ old('price', $product->price ?? '') }}">
 
 <label for="image_path">Upload Image</label>
-<input type="text" name="image_path" id="image_path" >
+<input type="text" name="image_path" id="image_path" value="{{ old('image_path', $product->image_path ?? '') }}">
 
 <button type="submit">Save</button>
