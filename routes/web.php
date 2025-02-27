@@ -1,52 +1,37 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
-// Publika rutter som alla kan se
+require __DIR__ . '/auth.php';
+
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-// Autentiseringsrutter (login, registration etc.)
-require __DIR__.'/auth.php';
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
 
-// Produktrutter - skyddade med auth middleware
-Route::controller(ProductController::class)
-    ->middleware(['auth'])
-    ->prefix('products')
-    ->group(function () {
-        // Begränsad åtkomst för vanliga användare
-        Route::get('/', 'index')
-            ->name('products.index');
-        Route::get('/{product}', 'show')
-            ->name('products.show');
-        
-        // Admin-specifika funktioner
-        Route::middleware(['admin'])->group(function () {
-            Route::get('/create', 'create')
-                ->name('products.create');
-            Route::post('/store', 'store')
-                ->name('products.store');
-            Route::get('/{product}/edit', 'edit')
-                ->name('products.edit');
-            Route::patch('/{product}', 'update')
-                ->name('products.update');
-            Route::delete('/{product}', 'destroy')
-                ->name('products.destroy');
-        });
-    });
+Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
 
-// Omdirigera dashboard till produktsidan för alla inloggade användare
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return redirect()->route('products.index');
-    })->name('dashboard');
-});
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 
-// Admin-dashboard
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('admin.dashboard');
+    Route::middleware(['admin'])->group(function () {
+        Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+        Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
+        Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+        Route::patch('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+        Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+    });
 });
