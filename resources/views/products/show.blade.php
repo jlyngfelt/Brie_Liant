@@ -5,12 +5,16 @@
     <p> {{ $product->price }} </p>
     <img src="{{ $product->image_path }}">
 
-<a href=" {{ route('products.edit', $product->id) }} ">Edit</a>
 
-<form method ="post" action="{{ route('products.destroy', $product) }}">
-    @csrf
-    @method('DELETE')
-    <button>Delete</button>
-</form>
+    @if (auth()->user()->is_admin) :
+
+        <a href=" {{ route('products.edit', $product->id) }} ">Edit</a>
+        
+        <form method ="post" action="{{ route('products.destroy', $product) }}">
+            @csrf
+            @method('DELETE')
+            <button>Delete</button>
+        </form>
+    @endif
 
 </x-layout>
