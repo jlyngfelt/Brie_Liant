@@ -201,3 +201,29 @@ select:focus {
 .v-5, .h-5 {
     width: 20px;
 }
+
+.ms-3 {
+    width: 6rem;
+}
+
+.inline-flex {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.welcome.smaller {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 0;
+}
+
+@media (min-width: 640px) {
+    .sm\:justify-center {
+        justify-content: flex-start;
+    }
+}
