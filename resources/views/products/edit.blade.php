@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1>Edit Product: {{ $product->name }}</h1>
+    <h1>Gör ändringar för produkt: {{ $product->name }}</h1>
 
     <x-errors />
 

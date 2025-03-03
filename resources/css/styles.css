@@ -22,6 +22,7 @@ h1 {
     color: var(--cheesycolor);
     font-weight: 300;
     margin-bottom: 20px;
+    margin-left:3rem;
 }
 
 h2 {
@@ -130,6 +131,22 @@ button:active {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+button.logout {
+    width: 7rem;
+    height: 3;
+    margin:2rem;
+}
+
+.edit_delete {
+    display: flex;
+    gap: 2rem;
+    margin-top:2rem;
+}
+
+article.show {
+    margin:3rem;
+}
+
 .cheeseContainer {
     display: flex;
     width: 30%;
@@ -179,4 +196,8 @@ option:hover {
 
 select:focus {
     outline: none; 
+}
+
+.v-5, .h-5 {
+    width: 20px;
 }
