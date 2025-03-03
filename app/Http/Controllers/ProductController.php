@@ -5,17 +5,31 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request; //can be deleted
 use App\Http\Requests\SaveProductRequest;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $query = Product::query();
+
+        // Kolla om vi har fått in en kategori i URL:en (från dropdown-filtret)
+        if ($request->filled('category')) {
+            $query->where('category_id', $request->category);
+        }
+
+        // Hämta produkter (med eller utan filter)
+        $products = $query->paginate(6);
+
+        // Hämta alla kategorier för dropdown-listan
+        $categories = \App\Models\Category::all();
 
         return view('products.index', [
-            'products' => Product::paginate(1)
+            'products' => $products,
+            'categories' => $categories,
         ]);
     }
 
@@ -24,7 +38,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        $categories = Category::all();
+        return view('products.create', compact('categories'));
     }
 
     /**
@@ -63,7 +78,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit', compact('product'))
+        $categories = Category::all();
+        return view('products.edit', compact('product', 'categories'))
             ->with('status', 'Product edited');
     }
 
