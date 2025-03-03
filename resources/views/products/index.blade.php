@@ -1,6 +1,7 @@
 <x-layout>
     <h1>Products</h1>
-    @if (auth()->user()->is_admin) :
+    @if (auth()->user()->role === 'admin')
+
 <a href="{{ route('products.create') }}">New Product</a>
     @endif
 

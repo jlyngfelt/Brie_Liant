@@ -6,7 +6,7 @@
     <img src="{{ $product->image_path }}">
 
 
-    @if (auth()->user()->is_admin) :
+    @if (auth()->user()->role === 'admin')
 
         <a href=" {{ route('products.edit', $product->id) }} ">Edit</a>
         
