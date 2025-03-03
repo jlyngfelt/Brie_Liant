@@ -2,11 +2,11 @@
     <h1>Products</h1>
 
     @if (auth()->user()->role === 'admin')
-<a href="{{ route('products.create') }}">New Product</a>
+<h4><a href="{{ route('products.create') }}">New Product</a></h4>
     @endif
 
     <form method="GET" action="{{ route('products.index') }}">
-        <label for="category">Filtrera på osttyper:</label>
+        <h3><label for="category">Filtrera på osttyper:</label></h3>
         <select name="category" id="category" onchange="this.form.submit()">
             <option value="">Alla kategorier</option>
             @foreach($categories as $category)
