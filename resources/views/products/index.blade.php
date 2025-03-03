@@ -6,7 +6,7 @@
     @endif
 
     <form method="GET" action="{{ route('products.index') }}">
-        <label for="category">Filtrera på kategori:</label>
+        <label for="category">Filtrera på osttyper:</label>
         <select name="category" id="category" onchange="this.form.submit()">
             <option value="">Alla kategorier</option>
             @foreach($categories as $category)
@@ -17,14 +17,17 @@
         </select>
     </form>
     
-
+<main>
     @foreach($products as $product)
+    <article class="cheeseContainer">
         <h2><a href="{{ route('products.show', $product->id) }}"> {{ $product->name }} </a></h2>
         <p>{{ $product->description }}</p>
-        <p>{{ $product->price }} kr</p>
-        <p>Category: {{ $product->category?->name ?? '' }}</p>
+        <p>{{ $product->price }} kr/hg</p>
+        <p>Osttyper: {{ $product->category?->name ?? '' }}</p>
         <img src="{{ $product->image_path }}" alt="Ostbricka">
+    </article>
     @endforeach
+</main>
 
 {{ $products->links() }}
 

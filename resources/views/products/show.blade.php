@@ -1,9 +1,9 @@
 <x-layout>
 
-    <h1> {{ $product->name }} </h1>
+    <h2> {{ $product->name }} </h2>
     <p> {{ $product->description }} </p>
-    <p> {{ $product->price }} </p>
-    <p>Category: {{ $product->category?->name ?? '' }}</p>
+    <p> {{ $product->price }} kr/hg</p>
+    <p>Osttyp: {{ $product->category?->name ?? '' }}</p>
     <img src="{{ $product->image_path }}">
 
 

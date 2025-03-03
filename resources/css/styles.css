@@ -1,0 +1,61 @@
+:root {
+    --headfont: Imperial Script;
+    --textfont: Cormorant;
+
+    --backgroundcolor: #353736;
+    --fontcolor: rgb(255, 255, 255);
+
+}
+
+body {
+    background-color: var(--backgroundcolor);
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+
+h2 {
+    font-family: var(--headfont);
+    font-size: 3rem;
+    color:var(--fontcolor)
+
+}
+
+p {
+    font-family: var(--textfont);
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: var(--fontcolor);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+ width: 30vw;
+ height: 200px;
+    object-fit: cover;
+
+}
+
+main {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cheeseContainer {
+    display:flex;
+    width: 30%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0;
+    padding:10px;
+    border: 1px solid black;
+}
