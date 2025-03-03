@@ -25,7 +25,8 @@ class SaveProductRequest extends FormRequest
             'name' => 'required|max:100',
             'description' => 'required',
             'price' => 'required',
-            'image_path' => 'nullable'
+            'image_path' => 'nullable',
+            'category_id' => 'required'
         ];
     }
 }
