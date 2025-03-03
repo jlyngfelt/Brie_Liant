@@ -5,6 +5,7 @@
     --backgroundcolor: #353736;
     --fontcolor: rgb(255, 255, 255);
     --textcolor: rgb(254, 252, 228);
+    --cheesycolor: rgb(229, 222, 158);
 }
 
 body {
@@ -12,12 +13,15 @@ body {
     box-sizing: border-box;
     width: 100vw;
     overflow-x: hidden;
+    margin: 0;
 }
 
 h1 {
     font-family: var(--textfont);
     font-size: 4rem;
-    color: var(--textcolor);
+    color: var(--cheesycolor);
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -27,7 +31,7 @@ h2 {
 }
 h3 {
     font-family: var(--textfont);
-    color:var(--fontcolor);
+    color: var(--fontcolor);
     font-weight: 200;
     display: inline-block;
     margin-bottom: 3rem;
@@ -35,8 +39,11 @@ h3 {
 
 h4 {
     font-family: var(--textfont);
-    color:var(--fontcolor);
+    color: var(--cheesycolor);
     font-weight: 200;
+    border: 1px solid var(--cheesycolor);
+    display: inline-block;
+    padding: 7px;
 }
 
 p {
@@ -44,6 +51,10 @@ p {
     font-size: 1.3rem;
     font-weight: 200;
     color: var(--fontcolor);
+}
+
+header {
+    margin-left: 2rem;
 }
 
 a {
@@ -63,6 +74,60 @@ main {
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    width: 30vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+label {
+    color: var(--textcolor);
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input {
+    height: 30px;
+    outline: none;
+    padding: 7px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 70px;
+    outline: none;
+    padding: 7px;
+}
+
+button {
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--fontcolor);
+    color: var(--backgroundcolor);
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: var(--cheesycolor);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .cheeseContainer {
@@ -79,38 +144,39 @@ main {
 }
 
 select {
-    background-color: #1a1d23; /* Mörk bakgrund för select */
-    color: white; /* Vit text för option-värden */
-    border: 2px solid #444d56; /* Tunn grå kant */
-    border-radius: 10px; /* Rundade hörn för ett mjukare utseende */
-    padding: 12px 16px; /* Tillräckligt med utrymme för text */
-    font-size: 16px; /* Storlek på texten */
-    width: 200px; /* Sätt bredd på select-elementet */
-    transition: all 0.3s ease; /* Smidig övergång när man interagerar */
-  }
-  
-  /* Förändringar när man hovrar över select-elementet */
-  select:hover {
-    border-color: #fbf3d6; /* Guldfärgad kant när man hovrar för lyxig känsla */
-    cursor: pointer; /* Ändrar muspekaren till en pekare */
-  }
-  
-  /* Stil för option-värden */
-  option {
-    background-color: #1a1d23; /* Mörk bakgrund för varje alternativ */
-    color: white; /* Vit textfärg för optioner */
-    padding: 12px; /* Tillräckligt med utrymme för varje alternativ */
-    border-radius: 10px; /* Rundade hörn för ett mjukare utseende */
-    font-size: 16px; /* Storlek på texten */
-  }
-  
-  /* Förändringar när man hovrar över ett option-värde */
-  option:hover {
-    background-color: #444d56; /* Lättare grå bakgrund när man hovrar */
-    /* color: #f1c40f;  */
-  }
-  
-  /* Fokusera på select-elementet för att visa tydlig fokus */
-  select:focus {
-    outline: none; /* Tar bort standardfokusram */
-  }
+    -webkit-appearance: none; 
+    appearance: none;
+    background-color: #1a1d23; 
+    color: white; 
+    border: 2px solid #444d56; 
+    border-radius: 10px; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    width: 200px; 
+    transition: all 0.3s ease; 
+}
+
+
+select:hover {
+    border-color: #fbf3d6; 
+    cursor: pointer; 
+}
+
+
+option {
+    background-color: #2b2e35;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+
+option:hover {
+    background-color: #444d56;
+}
+
+
+select:focus {
+    outline: none; 
+}
