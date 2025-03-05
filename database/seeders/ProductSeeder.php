@@ -15,6 +15,7 @@ class ProductSeeder extends Seeder
     {
         $products = [
             ["name" => "Grevé", "category" => "1", "price" => 12, "weight" => 325, "description" => "Mild och nötig smak med inslag av sötma.", "image_url" => "https://cdb.arla.com/api/assets/falbygdensost/c78b5d71-05f5-4408-8ff8-bcccf1821437/greve.jpg?mode=crop&transform=downfill&quality=80&width=666&height=444"],
+            ["name" => "Gammel Knas", "category" => "1", "price" => 41, "weight" => 100, "description" => "Ostens sötma, syra och fetthalt kontrasteras med de krispigt spröda proteinkristallerna", "image_url" => "https://arlaunika.se/cdn/shop/products/gammel_knas_0ee44cbb-b75f-424d-b43f-164dcb98a083_1200x1000.jpg?v=1576689118"],
             ["name" => "Prästost", "category" => "1", "price" => 15, "weight" => 325, "description" => "Kraftig och fyllig smak med syrlig ton.", "image_url" => "https://cdb.arla.com/api/assets/falbygdensost/292e2ca0-1a23-4cc3-8d69-c0c9a88284f3/prastost.jpg?mode=crop&transform=downfill&quality=80&width=666&height=444"],
             ["name" => "Herrgård", "category" => "1", "price" => 14, "weight" => 325, "description" => "Mild och gräddig med sötaktig smak.", "image_url" => "https://cdb.arla.com/api/assets/falbygdensost/6a07f4a2-c8e9-43c1-9497-6a8471249859/herrgard.jpg?mode=crop&transform=downfill&quality=80&width=666&height=444"],
             ["name" => "Västerbotten", "category" => "1", "price" => 18, "weight" => 150, "description" => "Stark och pikant smak med lång eftersmak.", "image_url" => "https://www.johanlidbyvinhandel.se/privat/wp-content/uploads/sites/2/2023/03/vbotten.jpg"],
@@ -33,10 +34,10 @@ class ProductSeeder extends Seeder
             ["name" => "Camembert", "category" => "6", "price" => 16, "weight" => 180, "description" => "Mjuk och fyllig med jordig smak.", "image_url" => "https://cdb.arla.com/api/assets/falbygdensost/2ec47785-988b-4ab6-ac42-879e67095624/camembert-webb.jpg?mode=crop&transform=downfill&quality=80&width=666&height=444"],
             ["name" => "Feta", "category" => "3", "price" => 14, "weight" => 180, "description" => "Salt och smulig ost med frisk smak.", "image_url" => "https://cheesemaking.com/cdn/shop/products/feta-cheese-making-recipe-442412.jpg?crop=center&height=450&v=1739766230&width=800"],
             ["name" => "Halloumi", "category" => "3", "price" => 17, "weight" => 200, "description" => "Salt ost med hög smältpunkt.", "image_url" => "https://boutique.oleahoerdt.fr/images/produits/1753/1713166735-grilled-halloumi-2.webp"],
-            ["name" => "Appenzeller", "category" => "1", "price" => 21, "weight" => 100, "description" => "Stark och kryddig smak.", "image_url" => "https://media.martinservera.se/w_1440,q_auto,f_auto/prod/martinservera/produkt/3/051/323/DV02_514117_01.png"],
             ["name" => "Taleggio", "category" => "5", "price" => 20, "weight" => 150, "description" => "Krämig och mild smak med jordiga toner.", "image_url" => "https://osterqvist.se/wp-content/uploads/Taleggio-dop.jpg"],
             ["name" => "Provolone", "category" => "1", "price" => 19, "weight" => 150, "description" => "Mild till pikant smak beroende på lagring.", "image_url" => "https://www.volpetti.com/wp-content/uploads/2018/04/17-provolone-del-monaco_001.jpg"],
             ["name" => "Gruyere", "category" => "1", "price" => 43, "weight" => 120, "description" => "Mild och lätt nötig smak.", "image_url" => "https://www.cheesesfromswitzerland.com/fileadmin/Global/content/Unser_Schweizer_Kaese/Le_Gruyere_AOP/Beitragsbild.jpeg"],
+            ["name" => "Hallands siren", "category" => "2", "price" => 22, "weight" => 120, "description" => "Mild och lätt samtidigt som den är fast och krämig.", "image_url" => "https://arlaunika.se/cdn/shop/files/Hallands-Siren_1200x1000.jpg?v=1682489301"],
         ];
 
         foreach ($products as $productData) {
