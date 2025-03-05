@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Http\Request; //can be deleted
+use Illuminate\Http\Request;
 use App\Http\Requests\SaveProductRequest;
 use App\Models\Category;
 
@@ -16,15 +16,13 @@ class ProductController extends Controller
     {
         $query = Product::query();
 
-        // Kolla om vi har fått in en kategori i URL:en (från dropdown-filtret)
+        // Check for a category in the URL
         if ($request->filled('category')) {
             $query->where('category_id', $request->category);
         }
 
-        // Hämta produkter (med eller utan filter)
         $products = $query->paginate(6)->appends($request->query());
 
-        // Hämta alla kategorier för dropdown-listan
         $categories = \App\Models\Category::all();
 
         return view('products.index', [
@@ -47,17 +45,6 @@ class ProductController extends Controller
      */
     public function store(SaveProductRequest $request)
     {
-        // $product = new Product();
-
-        // $product->name = $request->name;
-        // $product->description = $request->description;
-        // $product->price = $request->price;
-        // $product->image_path = $request->image_path;
-
-        // $product->save();
-
-
-
         $product = Product::create($request->validated());
 
 

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1>New Product</h1>
+    <h1>Ny Produkt</h1>
 
     <x-errors />
     

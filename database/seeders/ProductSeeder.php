@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
                 'description' => $productData['description'],
                 'price' => $productData['price'],
                 'image_path' => $productData['image_url'],
-                'category_id' => $productData['category'], // Koppla rätt kategori
+                'category_id' => $productData['category'],
             ]);
         }
     }
