@@ -27,6 +27,7 @@ Brie_Liant is a Laravel-based website where users can browse products, filter th
 -   **Laravel Lang** – Handles multilingual support
 -   **Blade (HTML)** – Template engine for views
 -   **CSS** – Styles for design and layout
+-   **Vite** – Asset bundler for frontend compilation
 
 ## 📂 Installation & Setup
 
@@ -74,7 +75,7 @@ Brie_Liant is a Laravel-based website where users can browse products, filter th
     php artisan serve
     ```
 
-8. Compile frontend assets:
+8. Compile frontend assets with Vite:
     ```bash
     npm run dev
     ```
@@ -83,6 +84,7 @@ Brie_Liant is a Laravel-based website where users can browse products, filter th
 
 -   This project is designed specifically for **desktop** and is not optimized for mobile devices.
 -   Make sure to set `APP_LOCALE=sv` in your `.env` file to enable proper language support.
+-   Vite must be running (`npm run dev`) while developing to properly load assets.
 
 ## 👨‍💻 Team
 
