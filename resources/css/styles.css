@@ -147,11 +147,11 @@ button, .button-style {
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
-    display: inline-flex; /* Gör att det liknar en knapp */
-    align-items: center; /* Centrera texten vertikalt */
-    justify-content: center; /* Centrera texten horisontellt */
-    text-decoration: none; /* Ta bort understrykning */
-    margin:
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none; 
+    
 }
 
 button:hover, .button-style:hover{
