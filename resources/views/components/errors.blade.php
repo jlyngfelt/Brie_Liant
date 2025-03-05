@@ -1,7 +1,7 @@
 @if ($errors->any())
     <ul>
         @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
+        <h5><li>{{ $error }}</li></h5>
         @endforeach
     </ul>
     @endif
