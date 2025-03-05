@@ -14,12 +14,12 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            'hårdost',
-            'blåmögelost',
-            'färskost',
-            'getost',
-            'kittost',
-            'vitmögelost',
+            'Hårdost',
+            'Blåmögelost',
+            'Färskost',
+            'Getost',
+            'Kittost',
+            'Vitmögelost',
         ];
 
         foreach ($categories as $categoryName) {

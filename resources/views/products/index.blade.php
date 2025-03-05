@@ -10,7 +10,7 @@
         <form method="GET" action="{{ route('products.index') }}">
             <h3><label for="category">Filtrera på osttyper:</label></h3>
             <select name="category" id="category" onchange="this.form.submit()">
-                <option value="">Alla kategorier</option>
+                <option value="">Alla osttyper</option>
                 @foreach($categories as $category)
                 <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
                     {{ $category->name }}

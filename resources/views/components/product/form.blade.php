@@ -14,9 +14,9 @@
     <label for="image_path">Ladda upp bild</label>
     <input type="text" name="image_path" id="image_path" value="{{ old('image_path', $product->image_path ?? '') }}">
     
-    <label for="category_id">Kategori</label>
+    <label for="category_id">Osttyper</label>
     <select name="category_id" id="category_id">
-        <option value="">-- Välj kategori --</option>
+        <option value="">-- Välj osttyp --</option>
         @foreach(\App\Models\Category::all() as $category)
         <option value="{{ $category->id }}" 
         @selected(old('category_id', $product->category_id ?? '') == $category->id)>
