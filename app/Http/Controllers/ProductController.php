@@ -62,7 +62,7 @@ class ProductController extends Controller
 
 
         return redirect()->route('products.show', $product)
-            ->with('status', 'Product created');
+            ->with('status', 'Produkt skapad');
     }
 
     /**
@@ -80,7 +80,7 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         return view('products.edit', compact('product', 'categories'))
-            ->with('status', 'Product edited');
+            ->with('status', 'Produkt uppdaterad');
     }
 
     /**
@@ -101,6 +101,6 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect()->route('products.index')
-            ->with('status', 'Product deleted');
+            ->with('status', 'Produkt borttagen');
     }
 }
