@@ -152,12 +152,10 @@ return [
     'uppercase'              => ':Attribute måste vara versaler.',
     'url'                    => ':Attribute har ett ogiltigt format.',
     'uuid'                   => ':Attribute måste vara ett giltigt UUID.',
-
-        'attributes' => [
-            'name' => 'Namn',
-            'description' => 'Beskrivning',
-            'price' => 'Pris',
-            'category_id' => 'Osttyp',
-        
-    ]
+    'attributes'             => [
+        'category_id' => 'Osttyp',
+        'description' => 'Beskrivning',
+        'name'        => 'Namn',
+        'price'       => 'Pris',
+    ],
 ];
