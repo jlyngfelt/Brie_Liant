@@ -26,4 +26,7 @@
 </main >
 </select>
 
-<button type="submit">Spara</button>
+<section class="edit_delete">
+    <button type="submit">Spara</button>
+    <a href="/" aria-label="Gå tillbaka till produktsidan" class="button-style">Tillbaka</a> 
+</section>

@@ -10,7 +10,7 @@
     
     @if (auth()->user()->role === 'admin')
    <section class="edit_delete" aria-label="Administratörsåtgärder">
-        <button><a href=" {{ route('products.edit', $product->id) }} ">Ändra</a></button>
+        <a href=" {{ route('products.edit', $product->id) }} " class=".button-style" aria-label="Ändra produkt">Ändra</a>
         
         <form method ="post" action="{{ route('products.destroy', $product) }}">
             @csrf
