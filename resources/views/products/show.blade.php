@@ -18,6 +18,7 @@
             <button type="submit" aria-label="Ta bort produkten {{ $product->name }}">Ta bort</button>
 
         </form>
+        <a href="/" aria-label="Gå tillbaka till produktsidan" class="button-style">Tillbaka</a> 
     </section>
     @endif
     

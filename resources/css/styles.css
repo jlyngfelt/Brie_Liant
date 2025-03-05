@@ -117,7 +117,7 @@ textarea {
     padding: 7px;
 }
 
-button {
+/* button, .button-style {
     width: 5rem;
     height: 2rem;
     background-color: var(--fontcolor);
@@ -130,15 +130,37 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+} */
+
+button, .button-style {
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--fontcolor);
+    color: var(--backgroundcolor);
+    border: none;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: inline-flex; /* Gör att det liknar en knapp */
+    align-items: center; /* Centrera texten vertikalt */
+    justify-content: center; /* Centrera texten horisontellt */
+    text-decoration: none; /* Ta bort understrykning */
+    margin:
 }
 
-button:hover {
+button:hover, .button-style:hover{
     background-color: var(--cheesycolor);
     transform: translateY(-3px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
-button:active {
+button:active, .button-style:active {
     transform: translateY(1px);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
