@@ -19,7 +19,6 @@ Brie_Liant is a Laravel-based website where users can browse products, filter th
 -   Create new products
 -   Edit existing products
 -   Delete products
--   Manage content via the Laravel admin interface
 
 ## 🛠️ Technologies & Packages
 
