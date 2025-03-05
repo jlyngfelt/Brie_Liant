@@ -232,6 +232,12 @@ select:focus {
     margin-top: 0;
 }
 
+.alert {
+    color: rgb(249, 238, 223);
+    padding: 10px;
+    font-size: 20px;
+}
+
 @media (min-width: 640px) {
     .sm\:justify-center {
         justify-content: flex-start;
