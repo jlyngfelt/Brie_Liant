@@ -22,7 +22,7 @@ class ProductController extends Controller
         }
 
         // Hämta produkter (med eller utan filter)
-        $products = $query->paginate(6);
+        $products = $query->paginate(6)->appends($request->query());
 
         // Hämta alla kategorier för dropdown-listan
         $categories = \App\Models\Category::all();
