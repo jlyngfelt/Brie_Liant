@@ -2,11 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
 
 require __DIR__ . '/auth.php';
 
+
 Route::get('/', function () {
-    return view('welcome');
+    if (Auth::check()) {
+        return redirect()->route('products.index'); // Om inloggad, skicka till products
+    } else {
+        return redirect()->route('login'); // Om inte inloggad, skicka till login
+    }
 });
 
 Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
