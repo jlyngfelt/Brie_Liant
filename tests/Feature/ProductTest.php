@@ -17,11 +17,11 @@ class ProductTest extends TestCase
     #[Test]
     public function a_product_can_be_created(): void
     {
-        $admin = User::factory()->admin()->create(); // Skapa en admin
-        $this->actingAs($admin); // Logga in admin
+        $admin = User::factory()->admin()->create();
+        $this->actingAs($admin);
 
 
-        $category = Category::factory()->create(); // Skapa en kategori
+        $category = Category::factory()->create();
 
         $product = Product::create([
             'name' => 'Testost',
@@ -41,8 +41,8 @@ class ProductTest extends TestCase
     #[Test]
     public function a_product_can_be_viewed(): void
     {
-        $admin = User::factory()->admin()->create(); // Skapa en admin
-        $this->actingAs($admin); // Logga in admin
+        $admin = User::factory()->admin()->create();
+        $this->actingAs($admin);
 
 
         $category = Category::factory()->create();
@@ -59,8 +59,8 @@ class ProductTest extends TestCase
     #[Test]
     public function a_product_can_be_updated(): void
     {
-        $admin = User::factory()->admin()->create(); // Skapa en admin
-        $this->actingAs($admin); // Logga in admin
+        $admin = User::factory()->admin()->create();
+        $this->actingAs($admin);
 
 
         $category = Category::factory()->create();
