@@ -234,6 +234,10 @@ select:focus {
     width: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
+    color: var(--cheesycolor)
+}
+span.px-4 {
+    color: #444d56;
 }
 
 div.flex-1 {
