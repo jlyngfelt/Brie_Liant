@@ -5,11 +5,11 @@
     <p> {{ $product->description }} </p>
     <p> {{ $product->price }} kr/hg</p>
     <p>Osttyp: {{ $product->category?->name ?? '' }}</p>
-    <img src="{{ $product->image_path }}">
+    <img src="{{ $product->image_path }}" alt="Bild på {{ $product->name }}">
     
     
     @if (auth()->user()->role === 'admin')
-    <section class="edit_delete">
+    <section class="edit_delete" aria-labelledby="admin">
         <button><a href=" {{ route('products.edit', $product->id) }} ">Ändra</a></button>
         
         <form method ="post" action="{{ route('products.destroy', $product) }}">

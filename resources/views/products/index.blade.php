@@ -26,8 +26,8 @@
         <h2><a href="{{ route('products.show', $product->id) }}"> {{ $product->name }} </a></h2>
         <p>{{ $product->description }}</p>
         <p>{{ $product->price }} kr/hg</p>
-        <p>Osttyper: {{ $product->category?->name ?? '' }}</p>
-        <img src="{{ $product->image_path }}" alt="Ostbricka">
+        <p>Osttyper: {{ $product->category?->name ?? 'Ingen kategori' }}</p>
+        <img src="{{ $product->image_path }}" alt="Bild på {{ $product->name }}">
     </article>
     @endforeach
 </main>
@@ -36,7 +36,7 @@
 
 <form method="POST" action="{{ route('logout') }}">
     @csrf
-    <button class="logout" type="submit">Logga ut</button>
+    <button class="logout" type="submit"  aria-label="Logga ut från ditt konto">Logga ut</button>
 </form>
 
 
