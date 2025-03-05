@@ -9,13 +9,14 @@
     
     
     @if (auth()->user()->role === 'admin')
-    <section class="edit_delete" aria-labelledby="admin">
+   <section class="edit_delete" aria-label="Administratörsåtgärder">
         <button><a href=" {{ route('products.edit', $product->id) }} ">Ändra</a></button>
         
         <form method ="post" action="{{ route('products.destroy', $product) }}">
             @csrf
             @method('DELETE')
-            <button>Ta bort</button>
+            <button type="submit" aria-label="Ta bort produkten {{ $product->name }}">Ta bort</button>
+
         </form>
     </section>
     @endif
