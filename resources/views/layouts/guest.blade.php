@@ -20,7 +20,7 @@
     </head>
     <body>
         
-    <h1 class="welcome">Välkommen till Briliant,</h1>
+    <h1 class="welcome">Välkommen till Brieliant,</h1>
     <h1 class="welcome smaller">din ostbutik online.</h1>
     
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 ">
