@@ -14,7 +14,7 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $products = [
-            ["name" => "Gammel Knas", "category" => "1", "price" => 41, "description" => "Ostens sötma, syra och fetthalt kontrasteras med de krispigt spröda proteinkristallerna", "image_url" => "https://arlaunika.se/cdn/shop/products/gammel_knas_0ee44cbb-b75f-424d-b43f-164dcb98a083_1200x1000.jpg?v=1576689118"],
+            ["name" => "Gammel Knas", "category" => "1", "price" => 41, "description" => "En söt ost, med fantastiska proteinkristaller", "image_url" => "https://arlaunika.se/cdn/shop/products/gammel_knas_0ee44cbb-b75f-424d-b43f-164dcb98a083_1200x1000.jpg?v=1576689118"],
             ["name" => "Parmeggiano", "category" => "1", "price" => 35, "description" => "Hård och salt ost med mycket smak", "image_url" => "https://cdb.arla.com/api/assets/falbygdensost/3a0a1a7a-bd91-4013-b834-bc23c860f72f/parmeggiano-webb.jpg?mode=crop&transform=downfill&quality=80&width=666&height=444"],
             ["name" => "Brillat Savarin", "category" => "6", "price" => 22, "description" => "Mild och krämig vitmögelost med syrad grädde", "image_url" => "https://images.arla.com/recordid/985AE336-0AE6-41EA-B84FD1420E95AE90/brillat-savarin-med-balsamicostekt-vattenmelon-och-jordgubbssalsa.jpg?mode=crop&transform=downfill&quality=80&width=666&height=444"],
             ["name" => "Hallands siren", "category" => "2", "price" => 22, "description" => "Mild och lätt samtidigt som den är fast och krämig.", "image_url" => "https://arlaunika.se/cdn/shop/files/Hallands-Siren_1200x1000.jpg?v=1682489301"],

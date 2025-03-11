@@ -1,11 +1,11 @@
 :root {
-    --headfont: Imperial Script;
+    --headfont: Parisienne;
     --textfont: Cormorant;
 
     --backgroundcolor: #353736;
     --fontcolor: rgb(255, 255, 255);
     --textcolor: rgb(254, 252, 228);
-    --cheesycolor: rgb(229, 222, 158);
+    --cheesycolor: #e5de9e;
 }
 
 body {
