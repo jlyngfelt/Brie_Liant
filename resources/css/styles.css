@@ -117,21 +117,6 @@ textarea {
     padding: 7px;
 }
 
-/* button, .button-style {
-    width: 5rem;
-    height: 2rem;
-    background-color: var(--fontcolor);
-    color: var(--backgroundcolor);
-    border: none;
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-} */
-
 button, .button-style {
     width: 5rem;
     height: 2rem;
