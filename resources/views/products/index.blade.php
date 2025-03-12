@@ -26,7 +26,7 @@
         <h2><a href="{{ route('products.show', $product->id) }}"> {{ $product->name }} </a></h2>
         <p>{{ $product->description }}</p>
         <p>{{ $product->price }} kr/hg</p>
-        <p>Osttyper: {{ $product->category?->name ?? 'Ingen kategori' }}</p>
+        <p>Osttyp: {{ $product->category?->name ?? 'Ingen kategori' }}</p>
         <img src="{{ $product->image_path }}" alt="Bild på {{ $product->name }}">
     </article>
     @endforeach
